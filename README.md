@@ -8,4 +8,5 @@ Credits to the original creators: Shiru, Utz, Tim Follin, and others.
 
 .WAV, .CAS, .CMD files included. Tested in the 'TRS80GP' emulator. Not tested on real hardware.
 
+DISK1.DSK contains the first 25 music tunes.
 
