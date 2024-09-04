@@ -24,3 +24,5 @@ DISK1.DSK contains the first 25 music tunes.
 
 DISK2.DSK contains five octodeXl tunes.
 
+TRITONE.DSK contains all ~30 tritone tunes.
+
