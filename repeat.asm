@@ -286,7 +286,7 @@ soundLoop
 
 .ch2out=$+1
 	ld a,0				;7
-	out (#fe),a			;11
+	out (#ff),a			;11
 
 .ch2delay2=$+1
 	ld a,0				;7
