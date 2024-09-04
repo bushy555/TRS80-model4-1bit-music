@@ -1,1 +1,18 @@
 Internal Speaker Readme 
+
+1-bit music for the TRS80 model 4 computer. Converted to run on the model 4 from the ZX Specrtrum 1-bit music scene. Use PASMO and SJASMPLUS assemblers where required. Note: All audio is sent to the cassette port. Connect up an amplified speaker to the cassette port/jack/socket. Credits to the original creators: Shiru, Utz, Tim Follin, and others.
+
+.WAV, .CAS, .CMD files included. Tested in the 'TRS80GP' emulator. Not tested on real hardware.
+
+TRS80-model4-1bit-music for the internal speaker.   TEST only - Dont know yet if these work on real hardware.
+All audio is sent to port 0x90 which, as far as I can find out, should be the real internal speaker in a model 4.  No idea on bits to send; at this stage am just assuming it will be the same as the cassette port being bits 0,1.
+
+
+Details for 1-bit music on TRS80 via cassette port:
+
+ORG $6000
+
+Speaker (I think) hangs off port $90, Bits 0 and 1.
+
+So... spit out alternate values $00 and $02 to OUT ($90)
+
