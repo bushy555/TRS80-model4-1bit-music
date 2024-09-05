@@ -195,7 +195,7 @@ noise_next
 noise_volume equ $+1
 	cp $80						;7
 	sbc a,a						;4
-	and	2
+;	and	1
 	out 	($90),a					;11
 	exx							;4
 
@@ -283,7 +283,7 @@ noise_mode equ $
 
 	or b						;4		mix sample
 	
-	and	2
+;	and	1
 	out 	($90),a					;11
 
 		

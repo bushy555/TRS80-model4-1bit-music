@@ -194,7 +194,6 @@ noise_next
 noise_volume=$+1
 	cp #80						;7
 	sbc a,a						;4
-	and 2
 	out (#90),a					;11
 	exx							;4
 
@@ -281,7 +280,6 @@ noise_mode=$
 	sbc a,a						;4
 
 	or b						;4		mix sample
-	and 2
 	out (#90),a					;11
 		
 	exx							;4

@@ -1,5 +1,5 @@
 
-	output "sq.bin"
+	output "phsqueek.bin"
 ; Attempt with Jase's changes for real VZ
 ; not yet tested
 
@@ -299,7 +299,7 @@ globalMethod
 	xor b			;4		;combine with state ch1
 	ret c			;5		;timing
 
-	and 2	
+	and 1	
 	out ($90),a		;11
 
 	
@@ -428,7 +428,7 @@ _s2
 	ld c,(hl)		;7
 	inc hl			;6
 _s1	
-	and 2	
+	and 1	
 	out ($90),a		;11
 
 

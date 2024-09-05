@@ -71,7 +71,7 @@ playSong
 
 playRow
 	di
-	ld ix,#0202		;enable both tone channels (it is mask to xor with output)
+	ld ix,#0101		;enable both tone channels (it is mask to xor with output)
 	ld d,0
 .ch0ptr=$+1
 	ld hl,0			;read byte from first channel pointer
@@ -167,7 +167,7 @@ playRow
 	exx
 	ld c,a
 	ld a,b
-	and 2
+	and 1
 	out	($90),a
 	dec	e
 	jr nz,.delay1
@@ -176,7 +176,7 @@ playRow
 	jp z,.delay2
 	ld e,a
 	ld a,b
-	xor	#2
+	xor	#1
 	inc	hl
 .delay2ret:
 	ld b,a
