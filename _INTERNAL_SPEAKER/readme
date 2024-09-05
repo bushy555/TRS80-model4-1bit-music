@@ -6,14 +6,12 @@ Use PASMO and SJASMPLUS assemblers where required.  Credits to the original crea
 .WAV, .CAS, .CMD files included. Not tested at all, either in an emulator or yet on real hardware.
 
 TRS80-model4-1bit-music for the internal speaker.   TEST only - Dont know yet if these work on real hardware.
-All audio is sent to port 0x90 which, as far as I can find out, should be the real internal speaker in a model 4.  No idea on bits to send; at this stage am just assuming it will be the same as the cassette port being bits 0,1.
+All audio is sent to port 0x90 which, as far as I can find out, should be the real internal speaker in a model 4. 
 
 
 Details for 1-bit music on TRS80 via cassette port:
 
 ORG $6000
 
-Speaker (I think) hangs off port $90, Bits 0 and 1.
-
-So... spit out alternate values $00 and $02 to OUT ($90)
+Speaker (I think) hangs off port $90, uses bit 0 , so ...spit out alternate values $00 and $01 to OUT ($90)
 
