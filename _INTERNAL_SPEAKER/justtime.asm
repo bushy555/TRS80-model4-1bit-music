@@ -32,7 +32,7 @@ play
 	ld l,a
 
 	xor a
-	ld	a, 2
+	ld	a, 1
 	ld (songSpeedComp+1),a
 	ld (ch1out+1),a
 	ld (ch2out+1),a
@@ -113,7 +113,7 @@ noSustain2
 	or a
 	jr z,$+4
 ;	ld a,$18
-	ld	a, 2
+	ld	a, 1
 	ld (ch1out+1),a
 	jr z,noNote1
 
@@ -140,7 +140,7 @@ noNote1
 	or a
 	jr z,$+4
 ;	ld a,$18
-	ld	a, 2
+	ld	a, 1
 
 	ld (ch2out+1),a
 	jr z,noNote2
@@ -201,7 +201,7 @@ mask:
 	sub 1					;7
 	sbc a,a					;4
 
-	and	2
+	and	1
 	out ($90),a				;11
 	ld a,(mask+1)			;13
 	rlc a					;8

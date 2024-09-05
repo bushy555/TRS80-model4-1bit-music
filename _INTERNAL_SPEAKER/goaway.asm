@@ -239,92 +239,92 @@ PLAY_NOTE:
 L8168:       EXX
              EX   AF,AF'
              ADD  HL,BC
-	and 2
+
              OUT  ($90),A
              JR   C,L8171
              JR   L8173
-L8171:       XOR  2
+L8171:       XOR  1
 L8173:       ADD  IX,DE
              JR   C,L8179
              JR   L817B
-L8179:       XOR  2
+L8179:       XOR  1
 L817B:       EX   AF,AF'
-	and 2
+
              OUT  ($90),A
              EXX
              ADD  HL,BC
              JR   C,L8184
              JR   L8186
-L8184:       XOR  2
+L8184:       XOR  1
 L8186:       NOP
              JP   L818A
 
 L818A:       EXX
              EX   AF,AF'
              ADD  HL,BC
-	and 2
+
              OUT  ($90),A
              JR   C,L8193
              JR   L8195
-L8193:       XOR  $2
+L8193:       XOR  $1
 L8195:       ADD  IX,DE
              JR   C,L819B
              JR   L819D
-L819B:       XOR  $2
+L819B:       XOR  $1
 L819D:       EX   AF,AF'
-	and 2
+
              OUT  ($90),A
              EXX
              ADD  HL,BC
              JR   C,L81A6
              JR   L81A8
-L81A6:       XOR  2
+L81A6:       XOR  1
 L81A8:       NOP
              JP   L81AC
 
 L81AC:       EXX
              EX   AF,AF'
              ADD  HL,BC
-	and 2
+
              OUT  ($90),A
              JR   C,L81B5
              JR   L81B7
-L81B5:       XOR  2
+L81B5:       XOR  1
 L81B7:       ADD  IX,DE
              JR   C,L81BD
              JR   L81BF
-L81BD:       XOR  2
+L81BD:       XOR  1
 L81BF:       EX   AF,AF'
-	and 2
+
              OUT  ($90),A
              EXX
              ADD  HL,BC
              JR   C,L81C8
              JR   L81CA
-L81C8:       XOR  $2
+L81C8:       XOR  $1
 L81CA:       NOP
              JP   L81CE
 
 L81CE:       EXX
              EX   AF,AF'
              ADD  HL,BC
-	and 2
+
              OUT  ($90),A
              JR   C,L81D7
              JR   L81D9
-L81D7:       XOR  2
+L81D7:       XOR  1
 L81D9:       ADD  IX,DE
              JR   C,L81DF
              JR   L81E1
-L81DF:       XOR  2
+L81DF:       XOR  1
 L81E1:       EX   AF,AF'
-	and 2
+
              OUT  ($90),A
              EXX
              ADD  HL,BC
              JR   C,L81EA
              JR   L81EC
-L81EA:       XOR  2
+L81EA:       XOR  1
 
 L81EC:       DEC  E
              JP   NZ,L8168
@@ -332,23 +332,23 @@ L81EC:       DEC  E
              EXX
              EX   AF,AF'
              ADD  HL,BC
-	and 2
+
              OUT  ($90),A
              JR   C,L81F9
              JR   L81FB
-L81F9:       XOR  $2
+L81F9:       XOR  $1
 L81FB:       ADD  IX,DE
              JR   C,L8201
              JR   L8203
-L8201:       XOR  $2
+L8201:       XOR  $1
 L8203:       EX   AF,AF'
-	and 2
+
              OUT  ($90),A
              EXX
              ADD  HL,BC
              JR   C,L820C
              JR   L820E
-L820C:       XOR  $2
+L820C:       XOR  $1
 
 L820E:       DEC  D
              JP   NZ,PLAY_NOTE
@@ -388,9 +388,9 @@ DRUM_SAMPLE:
              LD   A,D                          ; Put border colour bits into A
              JR   NZ,L8247                     ; Sample bit set
              JR   Z,L8249                      ; Sample bit not set
-L8247:       OR   $2
+L8247:       OR   $1
 L8249:       
-	and 2
+
              OUT  ($90),A
              LD   E,$04
 L824D:       DEC  E

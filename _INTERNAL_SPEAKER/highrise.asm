@@ -8,7 +8,7 @@
 ; assemble using pasmo.exe assembler.
 ;
 
-BORDER 	equ 	2
+BORDER 	equ 	1
 
 
 ;HL  equ  add counter ch1
@@ -305,7 +305,7 @@ _s2
 	ld c, (hl)		;7
 	inc hl			;6
 _s1	
-	and 2
+;	and 1
 	out ($90), a		;11		
 
 	dec c			;4
