@@ -35,7 +35,7 @@ NO_VOLUME equ 0			;define this if you want to have the same volume for all the c
 play
 	di
 	ld (.nppos),hl
-	ld c,2
+	ld c,1
 	push iy
 	exx
 	push hl
@@ -173,7 +173,7 @@ drumSound
 drumTone
 	ld bc,2
 	ld a,b
-	ld de,$0200	; DJM
+	ld de,$0100	; DJM
 	ld l,(ix)
 .l01
 	bit 0,b
@@ -190,7 +190,7 @@ drumTone
 	xor d
 .l11
 
-;	and	2
+;	and	1
 	out	($90), a
 	djnz .l01
 	dec c
@@ -202,14 +202,14 @@ drumNoise
 	ld b,0
 	ld h,b
 	ld l,h
-	ld de,$0200	; DJM
+	ld de,$0100	; DJM
 .l02
 	ld a,(hl)
 	and d
 	out	($90), a
 	and (ix)
 	dec e
-	and	2
+;	and	1
 	out	($90), a
 	jr nz,.l12
 	ld e,(ix+1)
@@ -289,7 +289,7 @@ soundLoop
 	and c		;4
 	exx			;4
 	dec e		;4
-;	and	2
+;	and	1
 	out	($90), a
 	jr nz,soundLoop	;10=153t
 	dec d		;4
@@ -320,7 +320,7 @@ soundLoop
 	and c		;4
 	exx			;4
 	dec e		;4
-;	and	2
+;	and	1
 	out	($90), a
 	jr nz,soundLoop	;10=153t
 	dec d		;4
@@ -332,7 +332,7 @@ soundLoop
 ;	xor a
 ;	ld (26624), a
 
-;	and	2
+;	and	1
 	out	($90), a
 
 	ld (.prevHL),hl

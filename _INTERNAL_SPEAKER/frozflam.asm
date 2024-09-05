@@ -81,7 +81,7 @@ patpntr equ $+1			;fetch pointer to pattern data
 regularCore
 	ld (ch1Length),a
 	
-	ld a,$10
+	ld a,$1 
 	ld (stopch),a
 
 	pop hl			;duty1,2
@@ -120,7 +120,7 @@ playRegular
 duty1 equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 	
 	add ix,bc		;15
@@ -128,7 +128,7 @@ duty1 equ $+1
 duty2 equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 	nop			;4
@@ -142,7 +142,7 @@ duty4 equ $+1
 	cp $80			;7
 	sbc a,a			;4
 stopch equ $+1
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 
@@ -151,7 +151,7 @@ stopch equ $+1
 duty3 equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 	
 	dec c			;4
@@ -175,7 +175,7 @@ _skip
 noiseCore
 	ld (ch1Lengtha),a
 	
-	ld a,2	; $10		; DJM
+	ld a,1	; $1 		; DJM
 	ld (stopcha),a
 
 	pop hl			;duty1,2
@@ -215,7 +215,7 @@ playNoise
 duty1a equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 	
 	add ix,bc		;15
@@ -223,7 +223,7 @@ duty1a equ $+1
 duty2a equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 	exx			;4
@@ -235,7 +235,7 @@ duty4a equ $+1
 	cp $80			;7
 	sbc a,a			;4
 stopcha equ $+1
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 	add iy,de		;15
@@ -243,7 +243,7 @@ stopcha equ $+1
 duty3a equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 	
 	dec c			;4
@@ -267,7 +267,7 @@ _skip
 slideCore
 	ld (ch1Lengthb),a
 	
-	ld a,$10
+	ld a,$1 
 	ld (stopchb),a
 
 	pop hl			;duty1,2
@@ -306,7 +306,7 @@ playSlide
 duty1b equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 	
 	add ix,bc		;15
@@ -314,7 +314,7 @@ duty1b equ $+1
 duty2b equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 	;nop			;4
@@ -327,7 +327,7 @@ duty4b equ $+1
 	cp $80			;7
 	sbc a,a			;4
 stopchb equ $+1
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 	add iy,de		;15
@@ -336,7 +336,7 @@ duty3b equ $+1
 	cp $80			;7
 	sbc a,a			;4
 
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 	nop
@@ -364,7 +364,7 @@ _skip
 noiseslideCore
 	ld (ch1Lengthc),a
 	
-	ld a,2				; djm   $10
+	ld a,1				; djm   $10
 	ld (stopchc),a
 
 	pop hl			;duty1,2
@@ -403,7 +403,7 @@ playNoiseSlide
 duty1c equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 	
 	add ix,bc		;15
@@ -411,7 +411,7 @@ duty1c equ $+1
 duty2c equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 	exx			;4
@@ -423,7 +423,7 @@ duty4c equ $+1
 	cp $80			;7
 	sbc a,a			;4
 stopchc equ $+1
-	and $2			;7
+	and $1			;7
 	out	($90), a
 
 	add iy,de		;15
@@ -431,7 +431,7 @@ stopchc equ $+1
 duty3c equ $+1
 	cp $80			;7
 	sbc a,a			;4
-	and $2			;7
+	and $1			;7
 	out	($90), a
 	
 	rlc h

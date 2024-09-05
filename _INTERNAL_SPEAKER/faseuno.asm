@@ -225,11 +225,11 @@ soundLoop
     out ($90),a     	;11
     jr c,$+4        	;7/12
     jr $+4          	;7/12
-    xor 2         	 	;7
+    xor 1         	 	;7
     add ix,de       	;15
     jr c,$+4       		;7/12
     jr $+4          	;7/12
-    xor 2         	 	;7
+    xor 1         	 	;7
 
     exa             	;4
     out ($90),a     	;11
@@ -237,7 +237,7 @@ soundLoop
     add hl,bc       	;11
     jr c,$+4        	;7/12
     jr $+4				;7/12
-    xor 2       	  	;7
+    xor 1       	  	;7
 
     dec e           	;4
 	nop					;4
@@ -289,7 +289,7 @@ playDrum
 	ld a,d			;4
 	jr nz,$+4		;7/12
 	jr z,$+4		;7/12
-	or 2			;7
+	or 1			;7
 	out ($90),a		;11
 	ld e,4			;7
 	dec e			;4

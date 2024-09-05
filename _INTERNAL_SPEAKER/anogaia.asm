@@ -92,7 +92,7 @@ sound_loop_ch1
 
 	djnz $
 	
-	ld   a,#2
+	ld   a,#1
 	out  ($90),a
 	sub  c
 	ld   b,a
@@ -120,7 +120,7 @@ sound_loop_ch2
 
 	djnz $
 	
-	ld   a,2
+	ld   a,1
 	out  ($90),a
 	sub  c
 	ld   b,a
@@ -139,9 +139,8 @@ sound_loop_ch3
 	dec  d
 	jr   nz,sound_loop_next
 	ld   a,(ix)					;read noise from ROM
-	and  #2
 	out  ($90),a
-	xor  #2
+	xor  #1
 	out  ($90),a
 	ld   a,(ch3_period)
 	ld   d,a
