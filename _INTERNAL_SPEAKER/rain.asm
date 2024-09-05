@@ -176,7 +176,7 @@ drum1
 	dec c
 	jr nz,drum2
 	ld c,e
-	and 2
+	and 1
 	out ($90),a
 drum2
 	ld a,l
@@ -231,7 +231,7 @@ vol3=$+1
 	or b			;4
 	jr z,noOut		;7/12
 	ld b,a			;4
-	ld a,2			;7
+	ld a,1			;7
 	out ($90),a		;11
 
 	ld a,b			;4

@@ -178,13 +178,13 @@ sampleLoop
 	cp c				;4
 	sbc a,a				;4
 	add ix,de			;15
-	and 	2
+	and 	1
 	out ($90),a			;11
 	
 	ld a,ixh			;8
 	cp b				;4
 	sbc a,a				;4
-	and 	2
+	and 	1
 	out ($90),a			;11
 
 
@@ -193,7 +193,7 @@ sampleLoop
 	exx					;4
 	cp c				;4
 	sbc a,a				;4
-	and 	2
+	and 	1
 	out ($90),a			;11
 
 
@@ -262,7 +262,7 @@ drumMask equ $+1
 	and 0				;7
 	sub 1				;7
 	sbc a,a				;4
-	and 	2
+	and 	1
 	out ($90),a			;11
 	
 	ld a,(drumMask)		;13

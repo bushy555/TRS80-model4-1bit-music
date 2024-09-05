@@ -114,11 +114,11 @@ readNotes:
 	ld e,(hl) 
 	 inc hl
 	ld a,(hl) 
-	and 2
+	and 1
 	 ld c,a
 	ld a,(hl) 
 	 add a 
-	 and 2 
+	 and 1 
 	 ld (.noiseOn),a
 
 		ld hl,#C0DE
@@ -151,7 +151,7 @@ readNotes:
 
 ;	and 	16 
 ;	and 	32 
-	and	2
+	and	1
 		or 0
 .noiseOn:	EQU $-1
 ;	ld	($6800),a	; VZ
@@ -164,7 +164,7 @@ readNotes:
 		djnz .noiseLoop
 
 		ld a,c
-		xor 2	;16
+		xor 1;2	;16
 		ld c,a
 
 		dec d : jr nz,.drumLoop
@@ -364,7 +364,7 @@ soundLoop:
 		ld l,a
 		sbc a
 		nop
-		and 2;32;16			; 4+4+4 + 4+4+7=27t
+		and 1;2;32;16			; 4+4+4 + 4+4+7=27t
 
 ;	ld	($6800),a	; VZ
 ;	out 	(253),a		; Aquarius

@@ -105,7 +105,7 @@ readRow
 	inc hl
 	or a
 	jr z,$+4
-	ld a,#2
+	ld a,#1
 	ld (soundLoop.ch1out),a
 	jr z,.noNote1
 
@@ -131,7 +131,7 @@ readRow
 	inc hl
 	or a
 	jr z,$+4
-	ld a,#2
+	ld a,#1
 	ld (soundLoop.ch2out),a
 	jr z,.noNote2
 
@@ -190,7 +190,7 @@ readRow
 	and 0					;7
 	sub 1					;7
 	sbc a,a					;4
-	and #2					;7
+	and #1					;7
 	out ($90),a				;11
 	ld a,(.mask)			;13
 	rlc a					;8
@@ -263,7 +263,7 @@ soundLoop
 	dec a				;4
 	jr nz,$-1			;7/12
 
-	and 2
+;	and 1
 	out ($90),a			;11
 
 .ch2
@@ -292,7 +292,7 @@ soundLoop
 	ld a,0				;7
 	dec a				;4
 	jr nz,$-1			;7/12
-	and 2
+;	and 1
 	out ($90),a			;11
 
 .loop
