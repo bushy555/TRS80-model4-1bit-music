@@ -18,11 +18,11 @@ Details for 1-bit music on TRS80 via cassette port:
   
   So... spit out alternate values $00 and $02 to OUT ($FF)
 
-Still to do: All tunes still need to be changed to port $90 for the internal speaker in the model 4.
-
 DISK1.DSK contains the first 25 music tunes.
 
 DISK2.DSK contains five octodeXl tunes.
 
 TRITONE.DSK contains all ~30 tritone tunes.
+
+Sub-directory '_INTERNAL_SPEAKER' contains engine players and music tunes that have since been converted to run on physical hardware with the audio being played out to the internal speaker on Port $90.
 
